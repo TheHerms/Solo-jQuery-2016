@@ -5,25 +5,24 @@ var green = 0;
 
 $(document).ready(function() {
   $('.color-button').on('click', function() {
-    var color = $(this).data("#data-color");
+    var color = $(this).data("color");
     console.log(color);
 
-    $('.container').append('<div class="color-cube"'+ color +'class="data-color"></div>');
-
+    $('.container').append('<div class="color-cube '+ color +'"></div>');
 
     if(color == "red") {
       red ++;
-      $('.red').container('Total red: ' + red);
+      $('#red').html('' + red);
     } else if (color == "blue") {
       blue++;
-      $('.blue').container('Total blue: ' + blue);
+      $('#blue').html('' + blue);
     } else if (color == "yellow") {
       yellow++;
-      $('.yellow').container('Total yellow: ' + yellow);
+      $('#yellow').html('' + yellow);
     }
     else if (color == "green") {
     green++;
-      $('#green').html('Total green: ' + green);
+      $('#green').html('' + green);
     };
   });
 });
